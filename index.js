@@ -40,6 +40,6 @@ app.listen(port,(err)=>{
     {
         console.log(err);
     }
-    console.log('server up at port',port);
+    console.log('server running at port:',port);
     return;
 })
