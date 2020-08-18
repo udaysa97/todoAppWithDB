@@ -1,0 +1,43 @@
+<html> 
+<head>
+    <title> todoList </title>
+  
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" integrity="sha512-0p3K0H3S6Q4bEWZ/WmC94Tgit2ular2/n0ESdfEX8l172YyQj8re1Wu9s/HT9T/T2osUw5Gx/6pAZNk3UKbESw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <%- style %>
+   
+</head>
+<!-- header using partial concept -->
+<%- include('_header'); %>
+
+<!-- whole body is picked from ejs file of particular page called from its controller for rendering-->
+<%- body %>
+
+<!-- footer using partial  -->
+ <%- include('_footer'); %>
+<%- script %>
+
+<!-- Flash Messages will be displayed using below code -->
+<script>
+    <% if(flash.success && flash.success.length > 0 ) {%>
+        new Noty({
+            theme:'relax',
+            text:'<%= flash.success %>',
+            type:'success',
+            layout:'topCenter',
+            timeout: 1000
+        }).show();
+     <% } %>
+
+     <% if(flash.error && flash.error.length > 0 ) {%>
+        new Noty({
+            theme:'sunset',           
+            type:'error',
+            layout:'topCenter',
+            text:'<%= flash.error %>',
+            timeout: 2000
+        }).show();
+     <% } %>
+</script>
+</html>

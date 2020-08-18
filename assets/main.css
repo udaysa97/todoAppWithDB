@@ -1,0 +1,39 @@
+body{
+    background-image: url(images/images.jpg);
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-attachment: fixed;
+}
+ul{
+    list-style: none;
+}
+ul li div{
+    display: flex;
+    justify-content: space-between;
+}
+li{
+    line-height: 50px;
+}
+
+#add{
+
+    align-self: center;
+}
+
+#addtask{
+    display: none;
+    z-index: 1;
+
+}
+#viewtask{
+    position: absolute;
+
+    z-index: 2;
+}
+#main{
+    margin-top: 60px;
+}
+
+.jumbotron{
+    background-color: rgba(60, 195, 236, 0.95);
+}
